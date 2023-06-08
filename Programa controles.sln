@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33529.398
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Programa controles", "Programa controles\Programa controles.csproj", "{7DE5B282-4E85-4902-AC6F-8EF3AC25CBF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DE5B282-4E85-4902-AC6F-8EF3AC25CBF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE5B282-4E85-4902-AC6F-8EF3AC25CBF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE5B282-4E85-4902-AC6F-8EF3AC25CBF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE5B282-4E85-4902-AC6F-8EF3AC25CBF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EAEE41DC-1510-4CB8-B07D-44087344BDC6}
+	EndGlobalSection
+EndGlobal

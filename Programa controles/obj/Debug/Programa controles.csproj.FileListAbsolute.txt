@@ -1,0 +1,36 @@
+C:\Users\Leandro\Desktop\Programa controles\Programa controles\bin\Debug\Programa controles.exe.config
+C:\Users\Leandro\Desktop\Programa controles\Programa controles\bin\Debug\Programa controles.exe
+C:\Users\Leandro\Desktop\Programa controles\Programa controles\bin\Debug\Programa controles.pdb
+C:\Users\Leandro\Desktop\Programa controles\Programa controles\obj\Debug\Programa controles.csprojAssemblyReference.cache
+C:\Users\Leandro\Desktop\Programa controles\Programa controles\obj\Debug\Programa_controles.Form1.resources
+C:\Users\Leandro\Desktop\Programa controles\Programa controles\obj\Debug\Programa_controles.Properties.Resources.resources
+C:\Users\Leandro\Desktop\Programa controles\Programa controles\obj\Debug\Programa controles.csproj.GenerateResource.cache
+C:\Users\Leandro\Desktop\Programa controles\Programa controles\obj\Debug\Programa controles.csproj.CoreCompileInputs.cache
+C:\Users\Leandro\Desktop\Programa controles\Programa controles\obj\Debug\Programa controles.exe
+C:\Users\Leandro\Desktop\Programa controles\Programa controles\obj\Debug\Programa controles.pdb
+C:\proyectos visual\Programa controles\Programa controles\bin\Debug\Programa controles.exe.config
+C:\proyectos visual\Programa controles\Programa controles\bin\Debug\Programa controles.exe
+C:\proyectos visual\Programa controles\Programa controles\bin\Debug\Programa controles.pdb
+C:\proyectos visual\Programa controles\Programa controles\bin\Debug\QRCoder.dll
+C:\proyectos visual\Programa controles\Programa controles\obj\Debug\Programa_controles.Form1.resources
+C:\proyectos visual\Programa controles\Programa controles\obj\Debug\Programa_controles.Properties.Resources.resources
+C:\proyectos visual\Programa controles\Programa controles\obj\Debug\Programa controles.csproj.GenerateResource.cache
+C:\proyectos visual\Programa controles\Programa controles\obj\Debug\Programa controles.csproj.CoreCompileInputs.cache
+C:\proyectos visual\Programa controles\Programa controles\obj\Debug\Programa controles.csproj.CopyComplete
+C:\proyectos visual\Programa controles\Programa controles\obj\Debug\Programa controles.exe
+C:\proyectos visual\Programa controles\Programa controles\obj\Debug\Programa controles.pdb
+C:\Proyectos visual\Programa controles\Programa controles\obj\Debug\Programa controles.csprojAssemblyReference.cache
+C:\Proyectos visual\Programa controles\Programa controles\bin\Debug\Zen.Barcode.Core.dll
+C:\backup programa controles\Programa controles01\Programa controles\obj\Debug\Programa controles.csprojAssemblyReference.cache
+C:\backup programa controles\Programa controles01\Programa controles\obj\Debug\Programa_controles.Form1.resources
+C:\backup programa controles\Programa controles01\Programa controles\obj\Debug\Programa_controles.Properties.Resources.resources
+C:\backup programa controles\Programa controles01\Programa controles\obj\Debug\Programa controles.csproj.GenerateResource.cache
+C:\backup programa controles\Programa controles01\Programa controles\obj\Debug\Programa controles.csproj.CoreCompileInputs.cache
+C:\backup programa controles\Programa controles01\Programa controles\obj\Debug\Programa controles.exe
+C:\backup programa controles\Programa controles01\Programa controles\obj\Debug\Programa controles.pdb
+C:\backup programa controles\Programa controles01\Programa controles\bin\Debug\Programa controles.exe.config
+C:\backup programa controles\Programa controles01\Programa controles\bin\Debug\Programa controles.exe
+C:\backup programa controles\Programa controles01\Programa controles\bin\Debug\Programa controles.pdb
+C:\backup programa controles\Programa controles01\Programa controles\bin\Debug\QRCoder.dll
+C:\backup programa controles\Programa controles01\Programa controles\bin\Debug\Zen.Barcode.Core.dll
+C:\backup programa controles\Programa controles01\Programa controles\obj\Debug\Programa controles.csproj.CopyComplete
