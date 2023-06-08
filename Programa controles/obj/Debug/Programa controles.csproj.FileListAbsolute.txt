@@ -34,3 +34,4 @@ C:\backup programa controles\Programa controles01\Programa controles\bin\Debug\P
 C:\backup programa controles\Programa controles01\Programa controles\bin\Debug\QRCoder.dll
 C:\backup programa controles\Programa controles01\Programa controles\bin\Debug\Zen.Barcode.Core.dll
 C:\backup programa controles\Programa controles01\Programa controles\obj\Debug\Programa controles.csproj.CopyComplete
+C:\Proyectos visual\Programa controles\Programa controles\obj\Debug\Programa controles.csproj.ResolveComReference.cache

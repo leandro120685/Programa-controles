@@ -165,7 +165,48 @@ namespace Programa_controles
                 textBox10.Text = dataGridView1.Rows[selectedRowIndex].Cells[9].Value.ToString();
             }
         }
+        public void exportaraexcel(DataGridView tabla)
+        {
 
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+
+            excel.Application.Workbooks.Add(true);
+
+            int IndiceColumna = 0;
+
+            foreach (DataGridViewColumn col in tabla.Columns)
+            {
+
+                IndiceColumna++;
+
+                excel.Cells[1, IndiceColumna] = col.Name;
+
+            }
+
+            int IndeceFila = 0;
+
+            foreach (DataGridViewRow row in tabla.Rows)
+            {
+
+                IndeceFila++;
+
+                IndiceColumna = 0;
+
+                foreach (DataGridViewColumn col in tabla.Columns)
+                {
+
+                    IndiceColumna++;
+
+                    excel.Cells[IndeceFila + 1, IndiceColumna] = row.Cells[col.Name].Value;
+
+                }
+
+            }
+
+            excel.Visible = true;
+
+
+        }
         private void GenerarQRCode()
         {
             string contenido = string.Format("Codigo: {1}{0}Controlo: {2}{0}Fecha: {3}{0}Estado: {4}{0}Tdaql: {5}{0}Oc: {6}{0}Tdlote: {7}{0}Descripcion: {8}{0}Cdmaterial: {9}{0}Observaciones: {10}{0}", Environment.NewLine, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text);
@@ -193,6 +234,12 @@ namespace Programa_controles
 
             }
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            exportaraexcel(dataGridView1);
+                
         }
     }
 }
