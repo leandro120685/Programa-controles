@@ -58,7 +58,7 @@ namespace Programa_controles
 
         private void llenarTabla()
         {
-            string consulta = "select * from control02";
+            string consulta = "select Codigo, Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tdaql, Estado, Observaciones from control02";
             SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
