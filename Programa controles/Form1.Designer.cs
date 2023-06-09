@@ -191,15 +191,15 @@ namespace Programa_controles
             // 
             // pbFoto
             // 
-            this.pbFoto.Location = new System.Drawing.Point(868, 353);
+            this.pbFoto.Location = new System.Drawing.Point(868, 362);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(258, 232);
+            this.pbFoto.Size = new System.Drawing.Size(270, 232);
             this.pbFoto.TabIndex = 28;
             this.pbFoto.TabStop = false;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(914, 324);
+            this.button4.Location = new System.Drawing.Point(924, 324);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(129, 23);
             this.button4.TabIndex = 29;
@@ -218,9 +218,9 @@ namespace Programa_controles
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(946, 591);
+            this.button5.Location = new System.Drawing.Point(924, 600);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(116, 23);
+            this.button5.Size = new System.Drawing.Size(129, 23);
             this.button5.TabIndex = 31;
             this.button5.Text = "Guardar Qr";
             this.button5.UseVisualStyleBackColor = true;
