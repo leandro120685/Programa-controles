@@ -1,0 +1,25 @@
+
+CREATE TABLE control03 (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    Fecha VARCHAR(10),
+    Oc VARCHAR(50),
+    Descripcion VARCHAR(100),
+    Controlo VARCHAR(50),
+    Cdmaterial VARCHAR(50),
+    Tdlote VARCHAR(50),
+    Tdaql VARCHAR(50),
+    Estado VARCHAR(50),
+    Observaciones VARCHAR(200),
+    Codigo AS CONCAT(RIGHT('0' + CAST(MONTH(GETDATE()) AS VARCHAR(2)), 2), CAST(YEAR(GETDATE()) AS VARCHAR(4)),
+                    CASE WHEN id < 10 THEN CAST(id AS VARCHAR(1))
+                         ELSE CAST(id AS VARCHAR(2))
+                    END)
+);
+
+
+
+
+
+
+
+
