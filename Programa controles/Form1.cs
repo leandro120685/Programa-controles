@@ -239,7 +239,50 @@ namespace Programa_controles
         private void button6_Click(object sender, EventArgs e)
         {
             exportaraexcel(dataGridView1);
-                
+
         }
+        private void RealizarBusqueda()
+        {
+            string parametroBusqueda = textBox11.Text;
+            string columnaBusqueda = comboBox1.SelectedItem.ToString();
+
+            // Verificar si se ha seleccionado una columna de búsqueda
+            if (string.IsNullOrEmpty(columnaBusqueda))
+            {
+                MessageBox.Show("Por favor, seleccione una columna de búsqueda.");
+                return;
+            }
+
+            // Realizar la búsqueda en la base de datos
+            string consulta = string.Format("SELECT Codigo, Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tdaql, Estado, Observaciones FROM control02 WHERE {0} LIKE '%{1}%'", columnaBusqueda, parametroBusqueda);
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+
+            string parametroBusqueda = textBox11.Text;
+            string columnaBusqueda = comboBox1.SelectedItem.ToString();
+
+            // Verificar si se ha seleccionado una columna de búsqueda
+            if (string.IsNullOrEmpty(columnaBusqueda))
+            {
+                MessageBox.Show("Por favor, seleccione una columna de búsqueda.");
+                return;
+            }
+
+            // Realizar la búsqueda en la base de datos
+            string consulta = string.Format("SELECT Codigo, Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tdaql, Estado, Observaciones FROM control02 WHERE {0} LIKE '%{1}%'", columnaBusqueda, parametroBusqueda);
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+        
     }
 }

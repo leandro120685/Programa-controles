@@ -60,6 +60,9 @@ namespace Programa_controles
             this.label11 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.buttonBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,7 +102,7 @@ namespace Programa_controles
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(650, 165);
+            this.label4.Location = new System.Drawing.Point(652, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 20);
             this.label4.TabIndex = 3;
@@ -160,7 +163,7 @@ namespace Programa_controles
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(656, 197);
+            this.textBox10.Location = new System.Drawing.Point(656, 141);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(406, 106);
@@ -339,11 +342,45 @@ namespace Programa_controles
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(750, 259);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(203, 20);
+            this.textBox11.TabIndex = 46;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Fecha",
+            "Oc",
+            "Descripcion",
+            "Codigo",
+            "Cdmaterial"});
+            this.comboBox1.Location = new System.Drawing.Point(959, 259);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(112, 21);
+            this.comboBox1.TabIndex = 47;
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.Location = new System.Drawing.Point(653, 258);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(91, 22);
+            this.buttonBuscar.TabIndex = 48;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1138, 638);
+            this.Controls.Add(this.buttonBuscar);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox11);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label11);
@@ -432,6 +469,11 @@ namespace Programa_controles
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button buttonBuscar;
+       
+
     }
 }
 
