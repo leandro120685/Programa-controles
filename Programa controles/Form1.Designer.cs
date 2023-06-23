@@ -360,7 +360,7 @@ namespace Programa_controles
             "Cdmaterial"});
             this.comboBox1.Location = new System.Drawing.Point(959, 259);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(112, 21);
+            this.comboBox1.Size = new System.Drawing.Size(103, 21);
             this.comboBox1.TabIndex = 47;
             // 
             // buttonBuscar
