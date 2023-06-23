@@ -472,8 +472,7 @@ namespace Programa_controles
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buttonBuscar;
-       
-
+   
     }
 }
 
