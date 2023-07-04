@@ -1,4 +1,3 @@
-
 CREATE TABLE control03 (
     id INT IDENTITY(1,1) PRIMARY KEY,
     Fecha VARCHAR(10),
@@ -10,13 +9,28 @@ CREATE TABLE control03 (
     Tdaql VARCHAR(50),
     Estado VARCHAR(50),
     Observaciones VARCHAR(200),
-    Codigo AS CONCAT(RIGHT('0' + CAST(MONTH(GETDATE()) AS VARCHAR(2)), 2), CAST(YEAR(GETDATE()) AS VARCHAR(4)),
-                    CASE WHEN id < 10 THEN CAST(id AS VARCHAR(1))
-                         ELSE CAST(id AS VARCHAR(2))
-                    END)
+    Codigo VARCHAR(10)
 );
 
+CREATE TRIGGER UpdateCodigo
+ON control03
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @mes VARCHAR(2)
+    DECLARE @anio VARCHAR(4)
 
+    SET @mes = RIGHT('0' + CAST(MONTH(GETDATE()) AS VARCHAR(2)), 2)
+    SET @anio = CAST(YEAR(GETDATE()) AS VARCHAR(4))
+
+    UPDATE c
+    SET Codigo = CONCAT(@mes, @anio,
+                CASE WHEN c.id < 10 THEN CAST(c.id AS VARCHAR(1))
+                     ELSE CAST(c.id AS VARCHAR(2))
+                END)
+    FROM control03 c
+    INNER JOIN inserted i ON c.id = i.id
+END
 
 
 

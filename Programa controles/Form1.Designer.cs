@@ -178,7 +178,7 @@ namespace Programa_controles
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(825, 214);
+            this.dataGridView1.Size = new System.Drawing.Size(825, 238);
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -196,7 +196,7 @@ namespace Programa_controles
             // 
             this.pbFoto.Location = new System.Drawing.Point(868, 362);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(270, 232);
+            this.pbFoto.Size = new System.Drawing.Size(270, 256);
             this.pbFoto.TabIndex = 28;
             this.pbFoto.TabStop = false;
             // 
@@ -221,7 +221,7 @@ namespace Programa_controles
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(924, 600);
+            this.button5.Location = new System.Drawing.Point(943, 637);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(129, 23);
             this.button5.TabIndex = 31;
@@ -334,7 +334,7 @@ namespace Programa_controles
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(60, 603);
+            this.button6.Location = new System.Drawing.Point(60, 637);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 44;
@@ -377,7 +377,7 @@ namespace Programa_controles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1138, 638);
+            this.ClientSize = new System.Drawing.Size(1138, 672);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox11);

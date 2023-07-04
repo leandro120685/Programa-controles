@@ -58,7 +58,7 @@ namespace Programa_controles
 
         private void llenarTabla()
         {
-            string consulta = "select Codigo, Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tdaql, Estado, Observaciones from control02";
+            string consulta = "select Codigo, Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tdaql, Estado, Observaciones from control03";
             SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
@@ -84,7 +84,7 @@ namespace Programa_controles
             using (SqlConnection conexion = new SqlConnection("server=PUESTO01; database=Empresa;integrated security=true"))
             {
                 conexion.Open();
-                string consulta = "insert into control02 (Controlo, Fecha, Estado, Tdaql, Oc, Tdlote, Descripcion, Cdmaterial, Observaciones) values (@Controlo, @Fecha, @Estado, @Tdaql, @Oc, @Tdlote, @Descripcion, @Cdmaterial, @Observaciones)";
+                string consulta = "insert into control03 (Controlo, Fecha, Estado, Tdaql, Oc, Tdlote, Descripcion, Cdmaterial, Observaciones) values (@Controlo, @Fecha, @Estado, @Tdaql, @Oc, @Tdlote, @Descripcion, @Cdmaterial, @Observaciones)";
                 SqlCommand comando = new SqlCommand(consulta, conexion);
                 comando.Parameters.AddWithValue("@Controlo", textBox2.Text);
                 comando.Parameters.AddWithValue("@Fecha", textBox3.Text);
@@ -108,7 +108,7 @@ namespace Programa_controles
             using (SqlConnection conexion = new SqlConnection("server=PUESTO01; database=Empresa;integrated security=true"))
             {
                 conexion.Open();
-                string consulta = "delete from control02 where Codigo = @Codigo";
+                string consulta = "delete from control03 where Codigo = @Codigo";
                 SqlCommand comando = new SqlCommand(consulta, conexion);
                 comando.Parameters.AddWithValue("@Codigo", textBox1.Text);
 
@@ -124,7 +124,7 @@ namespace Programa_controles
             using (SqlConnection conexion = new SqlConnection("server=PUESTO01; database=Empresa;integrated security=true"))
             {
                 conexion.Open();
-                string consulta = "update control02 set Controlo = @Controlo, Fecha = @Fecha, Estado = @Estado, Tdaql = @Tdaql, Oc = @Oc, Tdlote = @Tdlote, Descripcion = @Descripcion, Cdmaterial = @Cdmaterial, Observaciones = @Observaciones where Codigo = @Codigo";
+                string consulta = "update control03 set Controlo = @Controlo, Fecha = @Fecha, Estado = @Estado, Tdaql = @Tdaql, Oc = @Oc, Tdlote = @Tdlote, Descripcion = @Descripcion, Cdmaterial = @Cdmaterial, Observaciones = @Observaciones where Codigo = @Codigo";
                 SqlCommand comando = new SqlCommand(consulta, conexion);
                 comando.Parameters.AddWithValue("@Controlo", textBox2.Text);
                 comando.Parameters.AddWithValue("@Fecha", textBox3.Text);
@@ -254,7 +254,7 @@ namespace Programa_controles
             }
 
             // Realizar la búsqueda en la base de datos
-            string consulta = string.Format("SELECT Codigo, Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tdaql, Estado, Observaciones FROM control02 WHERE {0} LIKE '%{1}%'", columnaBusqueda, parametroBusqueda);
+            string consulta = string.Format("SELECT Codigo, Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tdaql, Estado, Observaciones FROM control03 WHERE {0} LIKE '%{1}%'", columnaBusqueda, parametroBusqueda);
 
             SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
             DataTable dt = new DataTable();
@@ -277,7 +277,7 @@ namespace Programa_controles
                 }
 
                 // Realizar la búsqueda en la base de datos
-                string consulta = string.Format("SELECT Codigo, Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tdaql, Estado, Observaciones FROM control02 WHERE {0} LIKE '%{1}%'", columnaBusqueda, parametroBusqueda);
+                string consulta = string.Format("SELECT Codigo, Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tdaql, Estado, Observaciones FROM control03 WHERE {0} LIKE '%{1}%'", columnaBusqueda, parametroBusqueda);
 
                 SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
                 DataTable dt = new DataTable();
