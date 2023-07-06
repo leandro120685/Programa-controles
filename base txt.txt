@@ -17,6 +17,7 @@ CREATE TABLE control02 (
 );
 
 
+DBCC CHECKIDENT ('control02', RESEED, 27);
 
 
 
