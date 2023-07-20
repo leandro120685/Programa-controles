@@ -209,7 +209,7 @@ namespace Programa_controles
         }
         private void GenerarQRCode()
         {
-            string contenido = string.Format("Codigo: {1}{0}Controlo: {2}{0}Fecha: {3}{0}Estado: {4}{0}Tdaql: {5}{0}Oc: {6}{0}Tdlote: {7}{0}Descripcion: {8}{0}Cdmaterial: {9}{0}Observaciones: {10}{0}", Environment.NewLine, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text);
+            string contenido = string.Format("Código: {1}{0}Controlo: {2}{0}Fecha: {3}{0}Estado: {4}{0}Tdaql: {5}{0}Oc: {6}{0}Tdlote: {7}{0}Descripción: {8}{0}Cdmaterial: {9}{0}Observaciones: {10}{0}", Environment.NewLine, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text);
 
             QRCodeGenerator qrGenerador = new QRCodeGenerator();
             QRCodeData qrDatos = qrGenerador.CreateQrCode(contenido, QRCodeGenerator.ECCLevel.H);
