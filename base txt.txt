@@ -1,5 +1,4 @@
-
-CREATE TABLE control02 (
+CREATE TABLE control03 (
     id INT IDENTITY(1,1) PRIMARY KEY,
     Fecha VARCHAR(10),
     Oc VARCHAR(50),
@@ -10,17 +9,39 @@ CREATE TABLE control02 (
     Tdaql VARCHAR(50),
     Estado VARCHAR(50),
     Observaciones VARCHAR(200),
-    Codigo AS CONCAT(RIGHT('0' + CAST(MONTH(GETDATE()) AS VARCHAR(2)), 2), CAST(YEAR(GETDATE()) AS VARCHAR(4)),
-                    CASE WHEN id < 10 THEN CAST(id AS VARCHAR(1))
-                         ELSE CAST(id AS VARCHAR(2))
-                    END)
+    FechaRegistro DATETIME DEFAULT GETDATE(), -- Agregamos una columna para la fecha de registro
+    Mes INT,
+    Anio INT,
+    Codigo AS 
+        CONCAT(
+            RIGHT('0' + CAST(MONTH(FechaRegistro) AS VARCHAR(2)), 2), 
+            CAST(YEAR(FechaRegistro) AS VARCHAR(4)),
+            RIGHT('000' + CAST(id AS VARCHAR(3)), 3) -- Asegura que id tenga al menos 3 dígitos
+        )
 );
 
 
-DBCC CHECKIDENT ('control02', RESEED, 27);
+DBCC CHECKIDENT ('control03', RESEED, 27);
+
+
+
+ALTER TABLE control03
+DROP COLUMN Codigo;
+
+ALTER TABLE control02
+ADD Codigo AS CONCAT(
+    FORMAT(GETDATE(), 'MMyyyy'),
+    RIGHT('00' + CAST(id AS VARCHAR(3)), 3)
+);
 
 
 
 
+ALTER TABLE control03
+DROP COLUMN Codigo;
+
+
+use Registro
+insert into control03 (Fecha,Oc,Descripcion,Controlo,Cdmaterial,Tdlote,Tdaql,Estado,Observaciones)
 
 

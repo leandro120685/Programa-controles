@@ -14,7 +14,7 @@ namespace Programa_controles
 {
     public partial class Form1 : Form
     {
-        SqlConnection conexion = new SqlConnection("server=PUESTO01; database=Empresa;integrated security=true");
+        SqlConnection conexion = new SqlConnection("server=PUESTO01; database=Registro;integrated security=true");
 
         public Form1()
         {
@@ -81,7 +81,7 @@ namespace Programa_controles
 
         private void AgregarRegistro()
         {
-            using (SqlConnection conexion = new SqlConnection("server=PUESTO01; database=Empresa;integrated security=true"))
+            using (SqlConnection conexion = new SqlConnection("server=PUESTO01; database=Registro;integrated security=true"))
             {
                 conexion.Open();
                 string consulta = "insert into control03 (Controlo, Fecha, Estado, Tdaql, Oc, Tdlote, Descripcion, Cdmaterial, Observaciones) values (@Controlo, @Fecha, @Estado, @Tdaql, @Oc, @Tdlote, @Descripcion, @Cdmaterial, @Observaciones)";
@@ -105,7 +105,7 @@ namespace Programa_controles
 
         private void EliminarRegistro()
         {
-            using (SqlConnection conexion = new SqlConnection("server=PUESTO01; database=Empresa;integrated security=true"))
+            using (SqlConnection conexion = new SqlConnection("server=PUESTO01; database=Registro;integrated security=true"))
             {
                 conexion.Open();
                 string consulta = "delete from control03 where Codigo = @Codigo";
@@ -121,7 +121,7 @@ namespace Programa_controles
 
         private void ModificarRegistro()
         {
-            using (SqlConnection conexion = new SqlConnection("server=PUESTO01; database=Empresa;integrated security=true"))
+            using (SqlConnection conexion = new SqlConnection("server=PUESTO01; database=Registro;integrated security=true"))
             {
                 conexion.Open();
                 string consulta = "update control03 set Controlo = @Controlo, Fecha = @Fecha, Estado = @Estado, Tdaql = @Tdaql, Oc = @Oc, Tdlote = @Tdlote, Descripcion = @Descripcion, Cdmaterial = @Cdmaterial, Observaciones = @Observaciones where Codigo = @Codigo";
