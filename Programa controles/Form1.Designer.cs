@@ -186,11 +186,11 @@ namespace Programa_controles
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(422, 19);
+            this.label5.Location = new System.Drawing.Point(150, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(285, 31);
+            this.label5.Size = new System.Drawing.Size(769, 31);
             this.label5.TabIndex = 27;
-            this.label5.Text = "Registro de Control 01";
+            this.label5.Text = "F-Cali-07-TRAZABILIDAD DE CONTROLES DE RECEPCION";
             // 
             // pbFoto
             // 
@@ -213,7 +213,7 @@ namespace Programa_controles
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Programa_controles.Properties.Resources.Logo_Viyilant;
-            this.pictureBox1.Location = new System.Drawing.Point(881, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(871, 43);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(191, 58);
             this.pictureBox1.TabIndex = 30;
