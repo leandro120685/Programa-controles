@@ -111,7 +111,6 @@ namespace Programa_controles
             // 
             // textBox1
             // 
-            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(144, 217);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(80, 20);
@@ -443,7 +442,6 @@ namespace Programa_controles
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
@@ -472,7 +470,7 @@ namespace Programa_controles
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buttonBuscar;
-   
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
