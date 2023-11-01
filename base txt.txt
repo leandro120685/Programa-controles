@@ -48,3 +48,8 @@ INSERT INTO control04 (Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tda
 SELECT Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tdaql, Estado, Observaciones, FechaRegistro, Mes, Anio
 FROM control03;
 
+
+
+
+EXEC sp_rename 'nueva_control04', 'control04';
+
