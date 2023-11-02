@@ -30,11 +30,11 @@ namespace Programa_controles
         /// </summary>
         private void InitializeComponent()
         {
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -67,6 +67,14 @@ namespace Programa_controles
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(144, 217);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(80, 20);
+            this.textBox1.TabIndex = 4;
             // 
             // label1
             // 
@@ -108,13 +116,6 @@ namespace Programa_controles
             this.label4.TabIndex = 3;
             this.label4.Text = "Observaciones :";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(144, 217);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(80, 20);
-            this.textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
