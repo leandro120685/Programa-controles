@@ -54,11 +54,13 @@ FROM control03;
 EXEC sp_rename 'nueva_control04', 'control04';
 
 
+DBCC CHECKIDENT ('control03', RESEED, 27);
+
+select Codigo from  control04;
 
 
-
-SELECT ID FROM control04;
 DELETE FROM control04
-WHERE ID =1169;
+WHERE Codigo = '11202300*';
+
 
 
