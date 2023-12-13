@@ -1,0 +1,97 @@
+CREATE TRIGGER ResetIDCounter
+ON control03
+BEFORE INSERT
+AS
+BEGIN
+    DECLARE @NextID INT;
+
+    -- Obtener el próximo valor de id
+    SELECT @NextID = ISNULL(MAX(id), 0) + 1
+    FROM control03;
+
+    -- Verificar si el próximo id supera el límite superior
+    IF @NextID > 122023999
+    BEGIN
+        -- Reiniciar el contador a 122024001
+        SET @NextID = 122024001;
+    END
+
+    -- Establecer el nuevo valor de id en la inserción
+    INSERT INTO control03 (Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tdaql, Estado, Observaciones, Mes, Anio)
+    VALUES (INSERTED.Fecha, INSERTED.Oc, INSERTED.Descripcion, INSERTED.Controlo, INSERTED.Cdmaterial, INSERTED.Tdlote, INSERTED.Tdaql, INSERTED.Estado, INSERTED.Observaciones, INSERTED.Mes, INSERTED.Anio, @NextID);
+END;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+UPDATE control03
+SET Codigo = '012024001'
+WHERE Anio = 2024;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TRIGGER ResetIDCounter
+ON control03
+BEFORE INSERT
+AS
+BEGIN
+    DECLARE @NextID INT;
+    DECLARE @CurrentYear INT;
+    DECLARE @CurrentMonth INT;
+
+    -- Obtener el próximo valor de id
+    SELECT @CurrentYear = YEAR(GETDATE());
+    SELECT @CurrentMonth = MONTH(GETDATE());
+    
+    SELECT @NextID = ISNULL(MAX(id), 0) + 1
+    FROM control03;
+
+    -- Verificar si el próximo id supera el límite superior (999)
+    IF @NextID > 999
+    BEGIN
+        -- Reiniciar el contador a 1 si el año y mes han cambiado
+        IF @CurrentYear > (SELECT ISNULL(MAX(Anio), 0) FROM control03)
+            OR @CurrentMonth > (SELECT ISNULL(MAX(Mes), 0) FROM control03 WHERE Anio = @CurrentYear)
+        BEGIN
+            SET @NextID = 1;
+        END
+        ELSE
+        BEGIN
+            -- Incrementar el contador en 1
+            SET @NextID = 1 + @NextID % 999;
+        END
+    END
+
+    -- Establecer el nuevo valor de id en la inserción
+    INSERT INTO control03 (Fecha, Oc, Descripcion, Controlo, Cdmaterial, Tdlote, Tdaql, Estado, Observaciones, Mes, Anio, Codigo)
+    VALUES (INSERTED.Fecha, INSERTED.Oc, INSERTED.Descripcion, INSERTED.Controlo, INSERTED.Cdmaterial, INSERTED.Tdlote, INSERTED.Tdaql, INSERTED.Estado, INSERTED.Observaciones, INSERTED.Mes, INSERTED.Anio, 
+            CONCAT(
+                RIGHT('00' + CAST(@CurrentMonth AS VARCHAR(2)), 2),
+                CAST(@CurrentYear AS VARCHAR(4)),
+                RIGHT('000' + CAST(@NextID AS VARCHAR(3)), 3)
+            ));
+END;
